@@ -10,10 +10,12 @@ import { FunctionComponent } from "react";
  * and remove the ItemProps interface
  */
 
-interface ItemProps {}
+interface ItemProps {
+  children: React.ReactNode
+}
 
-const Item: FunctionComponent<ItemProps> = (props) => {
-  return <li>#Item goes here#</li>;
+const Item: FunctionComponent<ItemProps> = ({children}) => {
+  return <li>{children}</li>;
 };
 
 export default Item;
