@@ -1,0 +1,10 @@
+@use "../../theme.scss";
+
+.todo {
+  @include theme.row-layout;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}

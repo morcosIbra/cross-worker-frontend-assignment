@@ -1,0 +1,7 @@
+@use '../../theme.scss';
+
+.todo-list{
+  @include theme.column-layout;
+  list-style-type: none;
+  padding-left: 0px;
+}

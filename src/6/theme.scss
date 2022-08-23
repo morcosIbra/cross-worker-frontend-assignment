@@ -1,0 +1,29 @@
+/* DO NOT CHANGE THIS ROOT CLASS NAME*/
+
+$primary-color: #7e7eff;
+$danger-color: #f53a3a;
+
+.button-basic {
+  color: white;
+  background: $primary-color;
+  border: 0px;
+  cursor: pointer;
+}
+
+.button-danger{
+  @extend .button-basic;
+  background: $danger-color;
+}
+
+@mixin row-layout {
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@mixin column-layout {
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+

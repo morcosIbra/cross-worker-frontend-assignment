@@ -1,4 +1,12 @@
-/* DO NOT CHANGE THIS ROOT CLASS NAME*/
+@use 'theme.scss';
+
+
 #task-6 {
-  /* Styles goes here */
+  @include theme.column-layout;
+  gap: 40px;
+}
+
+.todos-layout{
+  display:flex;
+  flex-direction: column;
 }
