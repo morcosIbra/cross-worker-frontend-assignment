@@ -1,12 +1,13 @@
 import { FunctionComponent, MouseEventHandler } from "react";
+
 import { Todo as TodoInterface } from "../..";
 
 import "./todo.scss";
 
 interface TodoProps {
   todo: TodoInterface;
-  toggleTodoStatus: (id: string) => void;
-  removeTodo: (id: string) => void;
+  toggleTodoStatus: (id: TodoInterface['id']) => void;
+  removeTodo: (id: TodoInterface['id']) => void;
 }
 
 const Todo: FunctionComponent<TodoProps> = ({

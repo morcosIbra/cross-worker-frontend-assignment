@@ -1,13 +1,14 @@
 import { FunctionComponent } from "react";
-import { Todo as TodoInterface } from "../../";
 import Todo from "../Todo/Todo";
+
+import { Todo as TodoInterface } from "../../";
 
 import "./todoList.scss";
 
 interface TodoListProps {
   todoList: TodoInterface[];
-  toggleTodoStatus: (id: string) => void;
-  removeTodo: (id: string) => void;
+  toggleTodoStatus: (id: TodoInterface['id']) => void;
+  removeTodo: (id: TodoInterface['id']) => void;
 }
 
 const TodoList: FunctionComponent<TodoListProps> = ({

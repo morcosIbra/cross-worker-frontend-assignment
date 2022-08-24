@@ -1,8 +1,10 @@
 import { ChangeEventHandler, FunctionComponent } from "react";
 
+import { Todo } from "../..";
+
 interface SearchTodosProps {
-  searchQuery: string;
-  onChangeSearchQuery: (query: string) => void;
+  searchQuery: Todo['label'];
+  onChangeSearchQuery: (query: Todo['label']) => void;
 }
 
 const SearchTodos: FunctionComponent<SearchTodosProps> = ({

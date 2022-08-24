@@ -1,11 +1,13 @@
-import React, { ChangeEventHandler, FormEventHandler, FunctionComponent, MouseEventHandler } from "react";
+import { ChangeEventHandler, FormEventHandler, FunctionComponent } from "react";
 
 import "./createTodos.scss";
 
+import { Todo } from "../..";
+
 interface CreateTodoProps {
-  todoValue: string;
+  todoValue: Todo['label'];
   onSubmitTodo: () => void;
-  onChangeTodo: (todo: any) => void;
+  onChangeTodo: (todoValue: Todo['label']) => void;
 }
 
 const CreateTodo: FunctionComponent<CreateTodoProps> = ({

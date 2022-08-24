@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { todoInitialData } from "./todosInitialStore";
+
 import CreateTodo from "./components/CreateTodo/CreateTodo";
 import SearchTodos from "./components/SearchTodos/SearchTodos";
 import TodoList from "./components/TodoList/TodoList";
 
-// Style
 import "./index.scss";
 
 // Components
@@ -17,8 +17,8 @@ export interface Todo {
 };
 
 const Task6 = () => {
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [todoValue, setTodoValue] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<Todo["label"]>("");
+  const [todoValue, setTodoValue] = useState<Todo["label"]>("");
   const [todoList, setTodoList] = useState<Todo[]>(todoInitialData);
 
   const onSubmitTodo = (): void => {
@@ -36,7 +36,7 @@ const Task6 = () => {
     }
   };
 
-  const toggleTodoStatus = (id: string) => {
+  const toggleTodoStatus = (id: Todo["id"]) => {
     setTodoList((prevList) => {
       const mappedList = prevList.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : { ...todo }
@@ -45,7 +45,7 @@ const Task6 = () => {
     });
   };
 
-  const removeTodo = (id: string) => {
+  const removeTodo = (id: Todo["id"]) => {
     setTodoList((prevList) => {
       const mappedList = prevList.filter((todo) => todo.id !== id);
       return mappedList;
