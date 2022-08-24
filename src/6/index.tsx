@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { todoInitialData } from "./todosInitialStore";
 import CreateTodo from "./components/CreateTodo/CreateTodo";
 import SearchTodos from "./components/SearchTodos/SearchTodos";
