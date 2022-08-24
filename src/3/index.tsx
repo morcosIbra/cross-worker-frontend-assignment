@@ -2,7 +2,7 @@ import { FunctionComponent, useState } from "react";
 
 const Task3: FunctionComponent = () => {
   const [inputValue, setInputValue] = useState("");
-  const [items, setItems] = useState(["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]);
+  const [items] = useState(["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]);
   
   const inputChange = (e: any) => setInputValue(e.target.value);
   const filteredItems = items.filter((item) => item.includes(inputValue));

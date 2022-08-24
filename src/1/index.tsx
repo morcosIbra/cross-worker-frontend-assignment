@@ -1,7 +1,7 @@
 import { FunctionComponent, useState } from "react";
 
 const Task1: FunctionComponent = () => {
-  const [items, setItems] = useState([
+  const [items] = useState([
     "Item 1",
     "Item 2",
     "Item 3",
