@@ -20,14 +20,6 @@ const Task6 = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [todoValue, setTodoValue] = useState<string>("");
   const [todoList, setTodoList] = useState<Todo[]>(todoInitialData);
-  const [filteredTodoList, setFilteredTodoList] = useState<Todo[]>(todoInitialData);
-
-  useEffect(() => {
-    const filteredList = todoList.filter((todo) =>
-      todo.label.includes(searchQuery)
-    );
-    setFilteredTodoList(filteredList);
-  }, [searchQuery, todoList]);
 
   const onSubmitTodo = (): void => {
     if (todoValue) {
@@ -60,6 +52,9 @@ const Task6 = () => {
     });
   };
 
+  const filteredTodoList = todoList.filter((todo) =>
+      todo.label.includes(searchQuery)
+    );
   return (
     <div id="task-6">
       <CreateTodo
