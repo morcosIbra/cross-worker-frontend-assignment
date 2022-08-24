@@ -51,7 +51,8 @@ const Task6 = () => {
       return mappedList;
     });
   };
-
+  
+  // we can use here useMemo if there's a performance issue in large projects
   const filteredTodoList = todoList.filter((todo) =>
       todo.label.includes(searchQuery)
     );
